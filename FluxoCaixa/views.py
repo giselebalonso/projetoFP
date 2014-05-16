@@ -1,7 +1,7 @@
 from django.shortcuts import render, HttpResponseRedirect
 from datetime import datetime
-from caixas.models import Conta
 from pessoas.models import Pessoa
+from caixas.models import Conta
 
 def listarFluxos(request):
     pessoas = Pessoa.objects.all().order_by('nome')
