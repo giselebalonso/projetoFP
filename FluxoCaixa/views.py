@@ -6,7 +6,7 @@ from caixas.models import Conta
 def listarFluxos(request):
     pessoas = Pessoa.objects.all().order_by('nome')
 
-    return render(request, 'fluxos/listarFluxos.html', {'pessoas': pessoas})
+    return render(request, 'fluxos/fluxoListar.html', {'pessoas': pessoas})
 
 def pesquisarFluxos(request):
     if request.method == 'POST':
